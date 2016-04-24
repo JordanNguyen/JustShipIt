@@ -30,7 +30,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet var ImageDisplay: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        textview.hidden = true
+        
 
         // Do any additional setup after loading the view.
     }

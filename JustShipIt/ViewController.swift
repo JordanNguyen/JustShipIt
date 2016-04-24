@@ -51,6 +51,7 @@ class ViewController: UIViewController {
         if (width.text == "" || length.text == "" || height.text == "" || weight.text == ""
         || shippingDestination.text == "" || originDestination.text == "" || item.text == "")
         {
+            self.errorLabel.text = "Please complete all text fields"
             self.errorLabel.hidden = false
         }
         
@@ -140,7 +141,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize.height = 2200
+        scrollView.contentSize.height = 3200
         self.serviceLevelArrayLabel.hidden = true
         self.priceArrayLabel.hidden = true
         self.dateArrayLabel.hidden = true

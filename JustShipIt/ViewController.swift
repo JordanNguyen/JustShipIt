@@ -32,12 +32,24 @@ class ViewController: UIViewController {
     
     @IBOutlet var dateArrayLabel: UILabel!
     
+    @IBOutlet var shipItButton: UIButton!
+    
+    @IBOutlet var errorLabel: UILabel!
+    
     var serviceLevelArray:[String] = [];
     var priceArray:[String] = [];
     var carrierArray:[String] = [];
     var dateArray:[String] = [];
     
     @IBAction func justShipIt(sender: AnyObject) {
+        
+        if (width.text == "" || length.text == "" || height.text == "" || weight.text == ""
+        || shippingDestination.text == "" || originDestination.text == "" || item.text == "")
+        {
+            self.errorLabel.hidden = false
+        }
+        
+        else {
         let widthValue = width.text
         let lengthValue = length.text
         let heightValue = height.text
@@ -87,9 +99,11 @@ class ViewController: UIViewController {
                     self.shippingDestination.hidden = true
                     self.item.hidden = true
                     self.originDestination.hidden = true
+                    self.errorLabel.hidden = true
                     self.serviceLevelArrayLabel.hidden = false
                     self.priceArrayLabel.hidden = false
                     self.dateArrayLabel.hidden = false
+                    self.shipItButton.hidden = true
                     self.serviceLevelArrayLabel.text = self.carrierArray[0] + " " + self.serviceLevelArray[0]
                     self.priceArrayLabel.text = "$" + self.priceArray[0]
                     self.dateArrayLabel.text = "Estimated Arrival: " + self.dateArray[0]
@@ -99,6 +113,7 @@ class ViewController: UIViewController {
             }
         }
     }
+}
     
 //    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
 //        if (segue.identifier == "seg") {
@@ -116,6 +131,7 @@ class ViewController: UIViewController {
         self.serviceLevelArrayLabel.hidden = true
         self.priceArrayLabel.hidden = true
         self.dateArrayLabel.hidden = true
+        self.errorLabel.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 

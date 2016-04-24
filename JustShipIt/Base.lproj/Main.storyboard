@@ -26,7 +26,6 @@
                                 <state key="normal" title="Just Ship It"/>
                                 <connections>
                                     <action selector="justShipIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0r-iO-xfi"/>
-                                    <segue destination="AU1-CE-v2J" kind="show" identifier="seg" id="EcM-w2-tGs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just Ship It" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-tr-X72">
@@ -79,6 +78,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehR-mF-uTM">
+                                <rect key="frame" x="279" y="233" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1up-Jf-MHY">
+                                <rect key="frame" x="279" y="262" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -86,10 +97,12 @@
                             <constraint firstItem="U26-8w-dND" firstAttribute="top" secondItem="vAn-QH-9E1" secondAttribute="bottom" constant="8" symbolic="YES" id="7Gx-QM-6OQ"/>
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="leading" secondItem="fo6-23-L8a" secondAttribute="leading" id="E8Z-Sp-We2"/>
                             <constraint firstItem="BBI-K9-SG9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JOa-jO-IDi"/>
+                            <constraint firstItem="1up-Jf-MHY" firstAttribute="top" secondItem="ehR-mF-uTM" secondAttribute="bottom" constant="8" symbolic="YES" id="Kcz-Nt-ixT"/>
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="leading" secondItem="8bJ-ZW-Yw6" secondAttribute="leading" id="PEm-ge-zto"/>
                             <constraint firstAttribute="bottom" secondItem="gfu-5Z-gny" secondAttribute="bottom" constant="245" id="Pwp-NP-Pvh"/>
                             <constraint firstItem="ahC-r9-YOh" firstAttribute="top" secondItem="QYP-1F-Vvm" secondAttribute="bottom" constant="54" id="PyW-Ze-l7C"/>
                             <constraint firstItem="8bJ-ZW-Yw6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ROY-CS-pd0"/>
+                            <constraint firstItem="ehR-mF-uTM" firstAttribute="top" secondItem="8bJ-ZW-Yw6" secondAttribute="bottom" constant="32" id="TUk-qK-8H4"/>
                             <constraint firstItem="QYP-1F-Vvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VkY-N9-N6e"/>
                             <constraint firstItem="U26-8w-dND" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W53-hS-NGM"/>
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="leading" secondItem="U26-8w-dND" secondAttribute="leading" id="YPF-vB-p8x"/>
@@ -98,6 +111,8 @@
                             <constraint firstItem="gfu-5Z-gny" firstAttribute="top" secondItem="U26-8w-dND" secondAttribute="bottom" constant="10" id="byX-Uw-2Qy"/>
                             <constraint firstItem="xaF-tr-X72" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="djH-ln-Njq"/>
                             <constraint firstItem="xaF-tr-X72" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ejh-hy-qjB"/>
+                            <constraint firstItem="1up-Jf-MHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fd8-Pp-YFr"/>
+                            <constraint firstItem="ehR-mF-uTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fyf-Gl-pUq"/>
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="leading" secondItem="QYP-1F-Vvm" secondAttribute="leading" id="gky-34-ssa"/>
                             <constraint firstItem="ahC-r9-YOh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hHo-kH-aZ9"/>
                             <constraint firstItem="xaF-tr-X72" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mrI-Oi-cbL"/>
@@ -112,6 +127,8 @@
                         <outlet property="item" destination="QYP-1F-Vvm" id="goD-zz-fOB"/>
                         <outlet property="length" destination="fo6-23-L8a" id="2xw-o8-rxB"/>
                         <outlet property="originDestination" destination="BBI-K9-SG9" id="3B3-Zv-02t"/>
+                        <outlet property="priceArrayLabel" destination="1up-Jf-MHY" id="tvi-Ma-VQV"/>
+                        <outlet property="serviceLevelArrayLabel" destination="ehR-mF-uTM" id="irV-lo-Efg"/>
                         <outlet property="shippingDestination" destination="gfu-5Z-gny" id="sM8-a5-nj2"/>
                         <outlet property="weight" destination="U26-8w-dND" id="0xi-WO-YsT"/>
                         <outlet property="width" destination="8bJ-ZW-Yw6" id="QsC-zx-Wpv"/>

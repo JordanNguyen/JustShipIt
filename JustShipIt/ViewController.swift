@@ -26,6 +26,11 @@ class ViewController: UIViewController {
     
     @IBOutlet var item: UITextField!
     
+    @IBOutlet var serviceLevelArrayLabel: UILabel!
+    
+    @IBOutlet var priceArrayLabel: UILabel!
+    
+    
     var serviceLevelArray:[String] = [];
     var priceArray:[String] = [];
     
@@ -68,6 +73,18 @@ class ViewController: UIViewController {
                     }
                     print(self.serviceLevelArray)
                     print(self.priceArray)
+                    
+                    self.width.hidden = true
+                    self.length.hidden = true
+                    self.height.hidden = true
+                    self.weight.hidden = true
+                    self.shippingDestination.hidden = true
+                    self.item.hidden = true
+                    self.originDestination.hidden = true
+                    self.serviceLevelArrayLabel.hidden = false
+                    self.priceArrayLabel.hidden = false
+                    self.serviceLevelArrayLabel.text = self.serviceLevelArray[0]
+                    self.priceArrayLabel.text = "$" + self.priceArray[0]
                 }
             case .Failure(let error):
                 print(error)
@@ -75,19 +92,21 @@ class ViewController: UIViewController {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if (segue.identifier == "seg") {
-            var svc = segue!.destinationViewController as! DataViewController;
-            print("hi");
-            
-            svc.serviceArray = self.serviceLevelArray
-            
-        }
-    }
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        if (segue.identifier == "seg") {
+//            var svc = segue!.destinationViewController as! DataViewController;
+//            print("hi");
+//            
+//            svc.serviceArray = self.serviceLevelArray
+//            
+//        }
+//    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.serviceLevelArrayLabel.hidden = true
+        self.priceArrayLabel.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 

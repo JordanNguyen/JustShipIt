@@ -18,6 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-r9-YOh">
+                                <rect key="frame" x="248" y="485" width="105" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="7s2-wd-6kI"/>
+                                </constraints>
+                                <state key="normal" title="Just Ship It"/>
+                                <connections>
+                                    <action selector="justShipIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0r-iO-xfi"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just Ship It" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-tr-X72">
                                 <rect key="frame" x="0.0" y="20" width="600" height="32"/>
                                 <constraints>
@@ -86,21 +97,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-r9-YOh">
-                                <rect key="frame" x="248" y="485" width="105" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Complete All Fields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6s-xq-rov">
+                                <rect key="frame" x="196" y="96" width="208" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="105" id="7s2-wd-6kI"/>
+                                    <constraint firstAttribute="width" constant="208" id="XHw-gk-8dU"/>
+                                    <constraint firstAttribute="height" constant="28" id="caP-XL-oj8"/>
                                 </constraints>
-                                <state key="normal" title="Just Ship It"/>
-                                <connections>
-                                    <action selector="justShipIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0r-iO-xfi"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ZS-UP-3Dm"/>
+                            <constraint firstItem="J6s-xq-rov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6dj-7f-kcQ"/>
                             <constraint firstItem="U26-8w-dND" firstAttribute="top" secondItem="vAn-QH-9E1" secondAttribute="bottom" constant="8" symbolic="YES" id="7Gx-QM-6OQ"/>
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="leading" secondItem="fo6-23-L8a" secondAttribute="leading" id="E8Z-Sp-We2"/>
                             <constraint firstItem="BBI-K9-SG9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JOa-jO-IDi"/>
@@ -124,6 +135,7 @@
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="leading" secondItem="QYP-1F-Vvm" secondAttribute="leading" id="gky-34-ssa"/>
                             <constraint firstItem="ahC-r9-YOh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hHo-kH-aZ9"/>
                             <constraint firstItem="C7T-Ji-tGJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kgc-RJ-arq"/>
+                            <constraint firstItem="J6s-xq-rov" firstAttribute="top" secondItem="xaF-tr-X72" secondAttribute="bottom" constant="44" id="mGy-NY-Wut"/>
                             <constraint firstItem="xaF-tr-X72" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mrI-Oi-cbL"/>
                             <constraint firstItem="gfu-5Z-gny" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oUz-1t-czl"/>
                             <constraint firstItem="fo6-23-L8a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3v-zD-njo"/>
@@ -133,6 +145,7 @@
                     </view>
                     <connections>
                         <outlet property="dateArrayLabel" destination="C7T-Ji-tGJ" id="rC7-VJ-1ab"/>
+                        <outlet property="errorLabel" destination="J6s-xq-rov" id="2pr-i3-f6T"/>
                         <outlet property="height" destination="vAn-QH-9E1" id="M1E-ia-CG5"/>
                         <outlet property="item" destination="QYP-1F-Vvm" id="goD-zz-fOB"/>
                         <outlet property="length" destination="fo6-23-L8a" id="2xw-o8-rxB"/>

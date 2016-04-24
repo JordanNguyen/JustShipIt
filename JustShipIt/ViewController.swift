@@ -11,6 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
+    @IBOutlet var scrollView: UIScrollView!
+    
     @IBOutlet var itemName: UITextField!
     
     @IBOutlet var width: UITextField!
@@ -138,12 +140,14 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.contentSize.height = 2200
         self.serviceLevelArrayLabel.hidden = true
         self.priceArrayLabel.hidden = true
         self.dateArrayLabel.hidden = true
         self.errorLabel.hidden = true
         self.backButton.hidden = true
-        // Do any additional setup after loading the view, typically from a nib.
+        
+
     }
 
     override func didReceiveMemoryWarning() {

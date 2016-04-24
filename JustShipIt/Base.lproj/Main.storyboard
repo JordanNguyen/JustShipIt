@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qHr-Ly-afy">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -18,25 +18,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYa-8v-xtt">
-                                <rect key="frame" x="45" y="58" width="76" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jYa-8v-xtt">
+                                <rect key="frame" x="20" y="58" width="54" height="30"/>
                                 <state key="normal" title="Camera"/>
                                 <connections>
                                     <action selector="CameraAction:" destination="qHr-Ly-afy" eventType="touchUpInside" id="LA3-Bg-5PG"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ODG-Ep-07A">
-                                <rect key="frame" x="139" y="236" width="240" height="128"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg8-Cs-Od6">
-                                <rect key="frame" x="294" y="68" width="100" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg8-Cs-Od6">
+                                <rect key="frame" x="488" y="58" width="92" height="30"/>
                                 <state key="normal" title="Photo Library"/>
                                 <connections>
                                     <action selector="PhotoLibraryAction:" destination="qHr-Ly-afy" eventType="touchUpInside" id="g1b-xR-WsP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODG-Ep-07A">
+                                <rect key="frame" x="0.0" y="107" width="600" height="493"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jYa-8v-xtt" firstAttribute="top" secondItem="Lrh-YK-IxX" secondAttribute="bottom" constant="38" id="8RA-GH-E3h"/>
+                            <constraint firstItem="lg8-Cs-Od6" firstAttribute="top" secondItem="Lrh-YK-IxX" secondAttribute="bottom" constant="38" id="B7G-1M-1QF"/>
+                            <constraint firstItem="ODG-Ep-07A" firstAttribute="centerX" secondItem="n4B-WH-A0s" secondAttribute="centerX" id="S5a-wn-LCH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lg8-Cs-Od6" secondAttribute="trailing" id="cIl-S4-Dm0"/>
+                            <constraint firstItem="Ljy-Ko-DeL" firstAttribute="top" secondItem="ODG-Ep-07A" secondAttribute="bottom" id="cwH-Wd-3Aw"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="jYa-8v-xtt" secondAttribute="leading" id="vdQ-Wl-khR"/>
+                            <constraint firstItem="ODG-Ep-07A" firstAttribute="top" secondItem="lg8-Cs-Od6" secondAttribute="bottom" constant="19" id="wZL-4w-Eek"/>
+                            <constraint firstItem="ODG-Ep-07A" firstAttribute="leading" secondItem="n4B-WH-A0s" secondAttribute="leading" id="zOB-si-RNR"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="Camera" destination="jYa-8v-xtt" id="SMN-xk-ctO"/>

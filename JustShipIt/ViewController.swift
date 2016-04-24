@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController {
     @IBOutlet var width: UITextField!
@@ -20,7 +21,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var shippingDestination: UITextField!
     
+    @IBOutlet var originDestination: UITextField!
+    
     @IBOutlet var item: UITextField!
+    
     @IBAction func justShipIt(sender: AnyObject) {
         let widthValue = width.text
         let lengthValue = length.text
@@ -28,6 +32,7 @@ class ViewController: UIViewController {
         let weightValue = weight.text
         let shippingDestinationValue = shippingDestination.text
         let itemValue = item.text
+        let originDestinationValue = originDestination.text
         let itemDouble = Double(itemValue!)
         
         let parameters = [
@@ -40,20 +45,33 @@ class ViewController: UIViewController {
                     "value": itemDouble!
                 ]
             ],
-            "origin_address": ["zip": "93101"],
+            "origin_address": ["zip": originDestinationValue!],
             "destination_address": ["zip": shippingDestinationValue!]
         ]
         
-        Alamofire.request(.POST, "https://sandbox.shiphawk.com/api/v4/rates?api_key=ce664be73291da576420dc85e005ef1d", parameters: parameters, headers: ["Content-Type": "applications/json"], encoding: .JSON).responseJSON
-            { response in switch response.result {
-            case .Success(let JSON):
-                print("Success with JSON: \(JSON)")
-                
-                let response = JSON as! NSDictionary
-                
-            case .Failure(let error):
-                print("Request failed with error: \(error)")
+//        Alamofire.request(.POST, "https://sandbox.shiphawk.com/api/v4/rates?api_key=ce664be73291da576420dc85e005ef1d", parameters: parameters, headers: ["Content-Type": "applications/json"], encoding: .JSON).responseJSON
+//            { response in switch response.result {
+//            case .Success(let JSON):
+//                print("Success with JSON: \(JSON)")
+//            case .Failure(let error):
+//                print("Request failed with error: \(error)")
+//                }
+//        }
+//        Alamofire.request(.POST, "https://sandbox.shiphawk.com/api/v4/rates?api_key=ce664be73291da576420dc85e005ef1d", parameters: parameters, headers: ["Content-Type": "applications/json"], encoding: .JSON).responseSwiftyJSON({ (request, response, json, error) in
+//            println(json)
+//            println(error)
+//        })
+
+        Alamofire.request(.POST, "https://sandbox.shiphawk.com/api/v4/rates?api_key=ce664be73291da576420dc85e005ef1d", parameters: parameters, headers: ["Content-Type": "applications/json"], encoding: .JSON).responseJSON { response in
+            switch response.result {
+            case .Success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    print("JSON: \(json)")
                 }
+            case .Failure(let error):
+                print(error)
+            }
         }
     }
     

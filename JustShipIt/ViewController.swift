@@ -41,6 +41,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var backButton: UIButton!
     
+    //var nameofitem:String = ""
+    
     var serviceLevelArray:[String] = [];
     var priceArray:[String] = [];
     var carrierArray:[String] = [];

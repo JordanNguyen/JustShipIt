@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODG-Ep-07A">
+                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lg8-Cs-Od6">
                                 <rect key="frame" x="488" y="28" width="92" height="30"/>
                                 <state key="normal" title="Photo Library">
@@ -48,14 +51,6 @@
                                     <segue destination="UEq-yT-Qld" kind="show" id="9dH-oo-XbQ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODG-Ep-07A">
-                                <rect key="frame" x="0.0" y="107" width="600" height="493"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3g-rL-Kvn">
-                                <rect key="frame" x="252" y="517" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.62449355289999997" green="1" blue="0.81654643540000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -75,7 +70,6 @@
                         <outlet property="Camera" destination="jYa-8v-xtt" id="SMN-xk-ctO"/>
                         <outlet property="ImageDisplay" destination="ODG-Ep-07A" id="P76-xi-cRj"/>
                         <outlet property="Library" destination="lg8-Cs-Od6" id="BAV-vW-kN8"/>
-                        <outlet property="textview" destination="v3g-rL-Kvn" id="ksa-zs-Bb8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hs6-7P-JCW" userLabel="First Responder" sceneMemberID="firstResponder"/>

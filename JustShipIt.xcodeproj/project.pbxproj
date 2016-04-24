@@ -12,6 +12,9 @@
 		8B3014D51CCB49FF006F15B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3014D31CCB49FF006F15B3 /* Main.storyboard */; };
 		8B3014D71CCB49FF006F15B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B3014D61CCB49FF006F15B3 /* Assets.xcassets */; };
 		8B3014DA1CCB49FF006F15B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3014D81CCB49FF006F15B3 /* LaunchScreen.storyboard */; };
+		8B3014E41CCC3AFA006F15B3 /* getLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3014E31CCC3AFA006F15B3 /* getLocation.swift */; };
+		8B3014E61CCC3CB8006F15B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3014E51CCC3CB8006F15B3 /* CoreLocation.framework */; };
+		8B3014EB1CCC41A4006F15B3 /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		8B3014D61CCB49FF006F15B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8B3014D91CCB49FF006F15B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8B3014DB1CCB49FF006F15B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B3014E31CCC3AFA006F15B3 /* getLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getLocation.swift; sourceTree = "<group>"; };
+		8B3014E51CCC3CB8006F15B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B3014E61CCC3CB8006F15B3 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +45,7 @@
 		8B3014C31CCB49FF006F15B3 = {
 			isa = PBXGroup;
 			children = (
+				8B3014E51CCC3CB8006F15B3 /* CoreLocation.framework */,
 				8B3014CE1CCB49FF006F15B3 /* JustShipIt */,
 				8B3014CD1CCB49FF006F15B3 /* Products */,
 			);
@@ -54,14 +62,24 @@
 		8B3014CE1CCB49FF006F15B3 /* JustShipIt */ = {
 			isa = PBXGroup;
 			children = (
+				8B3014E91CCC3D2F006F15B3 /* Views */,
 				8B3014CF1CCB49FF006F15B3 /* AppDelegate.swift */,
-				8B3014D11CCB49FF006F15B3 /* ViewController.swift */,
 				8B3014D31CCB49FF006F15B3 /* Main.storyboard */,
 				8B3014D61CCB49FF006F15B3 /* Assets.xcassets */,
 				8B3014D81CCB49FF006F15B3 /* LaunchScreen.storyboard */,
 				8B3014DB1CCB49FF006F15B3 /* Info.plist */,
+				8B3014E31CCC3AFA006F15B3 /* getLocation.swift */,
 			);
 			path = JustShipIt;
+			sourceTree = "<group>";
+		};
+		8B3014E91CCC3D2F006F15B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B3014D11CCB49FF006F15B3 /* ViewController.swift */,
+				8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3014D21CCB49FF006F15B3 /* ViewController.swift in Sources */,
+				8B3014E41CCC3AFA006F15B3 /* getLocation.swift in Sources */,
+				8B3014EB1CCC41A4006F15B3 /* GetLocationViewController.swift in Sources */,
 				8B3014D01CCB49FF006F15B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +305,7 @@
 				8B3014E01CCB49FF006F15B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

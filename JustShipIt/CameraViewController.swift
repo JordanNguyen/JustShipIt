@@ -23,7 +23,6 @@ func fileInDocumentsDirectory(filename: String) -> String {
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     private lazy var client : ClarifaiClient = ClarifaiClient(appID: clarifaiClientID, appSecret: clarifaiClientSecret)
     var finalresults :[String] = []
-    @IBOutlet var textview: UITextField!
 
     @IBOutlet var Camera: UIButton!
     @IBOutlet var Library: UIButton!
@@ -84,9 +83,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
             (results: [ClarifaiResult]?, error: NSError?) in
             if error != nil {
                 print("Error: \(error)\n")
-                self.textview.text = "Sorry, there was an error recognizing your image."
             } else {
-                self.textview.text = "Tags:\n" + results![0].tags.joinWithSeparator(", ")
+                //self.textview.text = "Tags:\n" + results![0].tags.joinWithSeparator(", ")
                 let count = results![0].tags.count
                 if(count < 5){
                     self.finalresults = Array(results![0].tags.prefix(count))
@@ -94,8 +92,17 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 else {
                     self.finalresults = Array(results![0].tags.prefix(5))
                 }
+                self.performSegueWithIdentifier("datasegue", sender: self)
+
             }
 //            self.button.enabled = true
+        }
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue,sender: AnyObject!) {
+        
+        if (segue.identifier == "datasegue") {
+            var svc = segue.destinationViewController as! DataViewController;
+            svc.products = self.finalresults
         }
     }
 

@@ -6,6 +6,105 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Data View Controller-->
+        <scene sceneID="aFM-m0-ER0">
+            <objects>
+                <viewController id="clI-Rz-yL2" customClass="DataViewController" customModule="JustShipIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vlP-Xe-xYm"/>
+                        <viewControllerLayoutGuide type="bottom" id="5TA-Ke-2ah"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fsU-B4-ZzD">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select the best category for this item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxt-is-bYj">
+                                <rect key="frame" x="132" y="28" width="336" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Eb-Fo-KU9">
+                                <rect key="frame" x="168" y="103" width="265" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="w0N-Ex-1mL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxe-Vm-2iZ">
+                                <rect key="frame" x="168" y="466" width="265" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="AAw-5m-ymn"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="z3d-gz-MAm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pA8-cZ-shv">
+                                <rect key="frame" x="168" y="184" width="265" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="8sV-Cg-Qj8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0o-hz-kiB">
+                                <rect key="frame" x="168" y="270" width="265" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="9pR-kO-aMX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-Wn-PWu">
+                                <rect key="frame" x="168" y="369" width="265" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Cm2-XA-lf0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pA8-cZ-shv" firstAttribute="top" secondItem="4Eb-Fo-KU9" secondAttribute="bottom" constant="51" id="22H-DC-rtO"/>
+                            <constraint firstItem="Zxe-Vm-2iZ" firstAttribute="leading" secondItem="Wwj-Wn-PWu" secondAttribute="leading" id="2yF-WT-Olh"/>
+                            <constraint firstItem="cxt-is-bYj" firstAttribute="centerX" secondItem="fsU-B4-ZzD" secondAttribute="centerX" id="A7a-lI-BZ6"/>
+                            <constraint firstItem="Zxe-Vm-2iZ" firstAttribute="top" secondItem="Wwj-Wn-PWu" secondAttribute="bottom" constant="67" id="AWZ-zi-W97"/>
+                            <constraint firstItem="4Eb-Fo-KU9" firstAttribute="centerX" secondItem="fsU-B4-ZzD" secondAttribute="centerX" id="D5z-Ga-s1j"/>
+                            <constraint firstItem="Wwj-Wn-PWu" firstAttribute="top" secondItem="e0o-hz-kiB" secondAttribute="bottom" constant="69" id="DNg-MI-Deo"/>
+                            <constraint firstItem="Zxe-Vm-2iZ" firstAttribute="leading" secondItem="e0o-hz-kiB" secondAttribute="leading" id="IDh-e8-nje"/>
+                            <constraint firstItem="pA8-cZ-shv" firstAttribute="centerX" secondItem="fsU-B4-ZzD" secondAttribute="centerX" id="Spv-lx-AKi"/>
+                            <constraint firstItem="cxt-is-bYj" firstAttribute="top" secondItem="vlP-Xe-xYm" secondAttribute="bottom" constant="8" id="Trg-NE-cef"/>
+                            <constraint firstItem="Zxe-Vm-2iZ" firstAttribute="leading" secondItem="pA8-cZ-shv" secondAttribute="leading" id="VTu-tg-mRK"/>
+                            <constraint firstItem="5TA-Ke-2ah" firstAttribute="top" secondItem="Zxe-Vm-2iZ" secondAttribute="bottom" constant="104" id="ZId-Kz-Zne"/>
+                            <constraint firstItem="Zxe-Vm-2iZ" firstAttribute="leading" secondItem="4Eb-Fo-KU9" secondAttribute="leading" id="Zyy-wq-ulX"/>
+                            <constraint firstItem="e0o-hz-kiB" firstAttribute="top" secondItem="pA8-cZ-shv" secondAttribute="bottom" constant="56" id="eFK-ZR-dsy"/>
+                            <constraint firstItem="e0o-hz-kiB" firstAttribute="centerX" secondItem="fsU-B4-ZzD" secondAttribute="centerX" id="krK-BX-QF8"/>
+                            <constraint firstItem="Wwj-Wn-PWu" firstAttribute="centerX" secondItem="fsU-B4-ZzD" secondAttribute="centerX" id="puc-Gu-uXn"/>
+                            <constraint firstItem="Zxe-Vm-2iZ" firstAttribute="centerX" secondItem="fsU-B4-ZzD" secondAttribute="centerX" id="s4s-Rz-6A1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Option1" destination="4Eb-Fo-KU9" id="MBd-LQ-fIy"/>
+                        <outlet property="Option2" destination="pA8-cZ-shv" id="Fi4-RO-rtf"/>
+                        <outlet property="Option3" destination="e0o-hz-kiB" id="NhX-GL-9jp"/>
+                        <outlet property="Option4" destination="Wwj-Wn-PWu" id="gcM-uO-Uty"/>
+                        <outlet property="Option5" destination="Zxe-Vm-2iZ" id="KeT-EL-zFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSi-4z-kad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-599" y="-690"/>
+        </scene>
         <!--Camera-->
         <scene sceneID="wEH-5h-qxt">
             <objects>
@@ -51,11 +150,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ODG-Ep-07A">
                                 <rect key="frame" x="0.0" y="80" width="600" height="520"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v3g-rL-Kvn">
-                                <rect key="frame" x="252" y="517" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.62449355289999997" green="1" blue="0.81654643540000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -75,7 +169,7 @@
                         <outlet property="Camera" destination="jYa-8v-xtt" id="SMN-xk-ctO"/>
                         <outlet property="ImageDisplay" destination="ODG-Ep-07A" id="P76-xi-cRj"/>
                         <outlet property="Library" destination="lg8-Cs-Od6" id="BAV-vW-kN8"/>
-                        <outlet property="textview" destination="v3g-rL-Kvn" id="ksa-zs-Bb8"/>
+                        <segue destination="clI-Rz-yL2" kind="showDetail" identifier="datasegue" id="57f-ZV-itc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hs6-7P-JCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,7 +379,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGd-2U-5ck">
                                         <rect key="frame" x="279" y="177" width="42" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -441,6 +535,7 @@
         <image name="width.png" width="817" height="769"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W8P-Dk-2ob"/>
+        <segue reference="9dH-oo-XbQ"/>
+        <segue reference="z3d-gz-MAm"/>
     </inferredMetricsTieBreakers>
 </document>

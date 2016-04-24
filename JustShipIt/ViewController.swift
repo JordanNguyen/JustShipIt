@@ -62,12 +62,26 @@ class ViewController: UIViewController {
 //            println(error)
 //        })
 
+        var serviceLevelArray:[String] = [];
+        var priceArray:[String] = [];
+
         Alamofire.request(.POST, "https://sandbox.shiphawk.com/api/v4/rates?api_key=ce664be73291da576420dc85e005ef1d", parameters: parameters, headers: ["Content-Type": "applications/json"], encoding: .JSON).responseJSON { response in
             switch response.result {
             case .Success:
                 if let value = response.result.value {
                     let json = JSON(value)
-                    print("JSON: \(json)")
+//                    var iterator: Int = 0;
+                    for item in json["rates"].arrayValue {
+//                        print(item["service_level"].stringValue)
+//                        print(item["price"].stringValue)
+//                        serviceLevelArray[iterator] = item["service_level"].stringValue;
+//                        priceArray[iterator] = item["price"].stringValue;
+//                        iterator+=1;
+                        serviceLevelArray.append(item["service_level"].stringValue);
+                        priceArray.append(item["price"].stringValue);
+                        print(serviceLevelArray)
+                        print(priceArray)
+                    }
                 }
             case .Failure(let error):
                 print(error)

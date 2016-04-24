@@ -9,8 +9,9 @@
 import UIKit
 
 class DataViewController: UIViewController {
-
+    @IBOutlet var serviceLevel: UILabel!
     
+    @IBOutlet var priceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

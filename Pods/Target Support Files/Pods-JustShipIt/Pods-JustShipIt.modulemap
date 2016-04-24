@@ -1,0 +1,6 @@
+framework module Pods_JustShipIt {
+  umbrella header "Pods-JustShipIt-umbrella.h"
+
+  export *
+  module * { export * }
+}

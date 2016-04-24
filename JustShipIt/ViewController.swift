@@ -11,6 +11,8 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
+    @IBOutlet var scrollView: UIScrollView!
+    
     @IBOutlet var itemName: UITextField!
     
     @IBOutlet var width: UITextField!
@@ -38,6 +40,9 @@ class ViewController: UIViewController {
     @IBOutlet var errorLabel: UILabel!
     
     @IBOutlet var backButton: UIButton!
+    
+    @IBOutlet var mapButton: UIButton!
+    
     
     var serviceLevelArray:[String] = [];
     var priceArray:[String] = [];
@@ -108,6 +113,7 @@ class ViewController: UIViewController {
                     self.dateArrayLabel.hidden = false
                     self.shipItButton.hidden = true
                     self.backButton.hidden = false
+                    self.mapButton.hidden = false
                     self.serviceLevelArrayLabel.text = self.carrierArray[0] + " " + self.serviceLevelArray[0]
                     self.priceArrayLabel.text = "$" + self.priceArray[0]
                     self.dateArrayLabel.text = "Estimated Arrival: " + self.dateArray[0]
@@ -133,17 +139,20 @@ class ViewController: UIViewController {
         self.originDestination.hidden = false
         self.shipItButton.hidden = false
         self.backButton.hidden = true
+        self.mapButton.hidden = true
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        scrollView.contentSize.height = 2200
         self.serviceLevelArrayLabel.hidden = true
         self.priceArrayLabel.hidden = true
         self.dateArrayLabel.hidden = true
         self.errorLabel.hidden = true
         self.backButton.hidden = true
-        // Do any additional setup after loading the view, typically from a nib.
+        self.mapButton.hidden = true
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -119,6 +119,7 @@
 				154F3F3D1CCC7F4E0069875C /* DataViewController.swift */,
 				8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */,
 				8BDEE1A21CCCC43900E1AAD6 /* SwiftRecognitionViewController.swift */,
+				8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */,
 				154F3F411CCCD6970069875C /* FirstViewController.swift */,
 			);
 			name = Views;
@@ -159,7 +160,7 @@
 				TargetAttributes = {
 					8B3014CB1CCB49FF006F15B3 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = SZVLL8KQSW;
+						DevelopmentTeam = 2B6C4R464U;
 					};
 				};
 			};
@@ -371,7 +372,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustShipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt;
+				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JustShipIt/JustShipIt-Bridging-Header.h";
@@ -389,7 +390,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustShipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt;
+				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JustShipIt/JustShipIt-Bridging-Header.h";

@@ -41,6 +41,9 @@ class ViewController: UIViewController {
     
     @IBOutlet var backButton: UIButton!
     
+    @IBOutlet var mapButton: UIButton!
+    
+    
     var serviceLevelArray:[String] = [];
     var priceArray:[String] = [];
     var carrierArray:[String] = [];
@@ -110,6 +113,7 @@ class ViewController: UIViewController {
                     self.dateArrayLabel.hidden = false
                     self.shipItButton.hidden = true
                     self.backButton.hidden = false
+                    self.mapButton.hidden = false
                     self.serviceLevelArrayLabel.text = self.carrierArray[0] + " " + self.serviceLevelArray[0]
                     self.priceArrayLabel.text = "$" + self.priceArray[0]
                     self.dateArrayLabel.text = "Estimated Arrival: " + self.dateArray[0]
@@ -135,6 +139,7 @@ class ViewController: UIViewController {
         self.originDestination.hidden = false
         self.shipItButton.hidden = false
         self.backButton.hidden = true
+        self.mapButton.hidden = true
     }
 
     
@@ -146,6 +151,8 @@ class ViewController: UIViewController {
         self.dateArrayLabel.hidden = true
         self.errorLabel.hidden = true
         self.backButton.hidden = true
+        self.mapButton.hidden = true
+
     }
 
     override func didReceiveMemoryWarning() {

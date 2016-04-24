@@ -9,13 +9,25 @@
 import UIKit
 
 class DataViewController: UIViewController {
+    
+//    var myCustomViewController: ViewController = ViewController(nibName: nil, bundle: nil)
+//    var serviceDataArray = myCustomViewController.serviceLevelArray
+
+    
     @IBOutlet var serviceLevel: UILabel!
     
     @IBOutlet var priceLabel: UILabel!
     
+    var serviceArray:[String] = [];
+    var priceDataArray:[String] = [];
+
+    
+
+//    serviceLevel.text = viewController.
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(serviceArray)
+        print(priceDataArray)
         // Do any additional setup after loading the view.
     }
 

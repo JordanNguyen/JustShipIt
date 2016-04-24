@@ -26,7 +26,7 @@
                                 <state key="normal" title="Just Ship It"/>
                                 <connections>
                                     <action selector="justShipIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0r-iO-xfi"/>
-                                    <segue destination="AU1-CE-v2J" kind="show" id="EcM-w2-tGs"/>
+                                    <segue destination="AU1-CE-v2J" kind="show" identifier="seg" id="EcM-w2-tGs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just Ship It" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-tr-X72">
@@ -212,12 +212,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X64-R7-hzT">
-                                <rect key="frame" x="279" y="251" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -230,7 +224,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="priceLabel" destination="X64-R7-hzT" id="fKb-Tc-GiN"/>
                         <outlet property="serviceLevel" destination="B1A-hz-3Z4" id="wSL-GY-XUS"/>
                     </connections>
                 </viewController>

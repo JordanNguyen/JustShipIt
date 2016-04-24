@@ -199,7 +199,7 @@
 				TargetAttributes = {
 					8B3014CB1CCB49FF006F15B3 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = SZVLL8KQSW;
+						DevelopmentTeam = SHMKR9TT4G;
 					};
 				};
 			};
@@ -421,7 +421,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustShipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt;
+				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JustShipIt/JustShipIt-Bridging-Header.h";
@@ -439,7 +439,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustShipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt;
+				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JustShipIt/JustShipIt-Bridging-Header.h";

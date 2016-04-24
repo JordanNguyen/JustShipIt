@@ -32,6 +32,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var dateArrayLabel: UILabel!
     
+    @IBOutlet var shipItButton: UIButton!
+    
     var serviceLevelArray:[String] = [];
     var priceArray:[String] = [];
     var carrierArray:[String] = [];
@@ -90,6 +92,7 @@ class ViewController: UIViewController {
                     self.serviceLevelArrayLabel.hidden = false
                     self.priceArrayLabel.hidden = false
                     self.dateArrayLabel.hidden = false
+                    self.shipItButton.hidden = true
                     self.serviceLevelArrayLabel.text = self.carrierArray[0] + " " + self.serviceLevelArray[0]
                     self.priceArrayLabel.text = "$" + self.priceArray[0]
                     self.dateArrayLabel.text = "Estimated Arrival: " + self.dateArray[0]

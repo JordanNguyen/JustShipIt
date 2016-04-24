@@ -18,16 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-r9-YOh">
-                                <rect key="frame" x="248" y="485" width="105" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="105" id="7s2-wd-6kI"/>
-                                </constraints>
-                                <state key="normal" title="Just Ship It"/>
-                                <connections>
-                                    <action selector="justShipIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0r-iO-xfi"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Just Ship It" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xaF-tr-X72">
                                 <rect key="frame" x="0.0" y="20" width="600" height="32"/>
                                 <constraints>
@@ -96,6 +86,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahC-r9-YOh">
+                                <rect key="frame" x="248" y="485" width="105" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="7s2-wd-6kI"/>
+                                </constraints>
+                                <state key="normal" title="Just Ship It"/>
+                                <connections>
+                                    <action selector="justShipIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0r-iO-xfi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -138,6 +139,7 @@
                         <outlet property="originDestination" destination="BBI-K9-SG9" id="3B3-Zv-02t"/>
                         <outlet property="priceArrayLabel" destination="1up-Jf-MHY" id="tvi-Ma-VQV"/>
                         <outlet property="serviceLevelArrayLabel" destination="ehR-mF-uTM" id="irV-lo-Efg"/>
+                        <outlet property="shipItButton" destination="ahC-r9-YOh" id="YiQ-n0-qmq"/>
                         <outlet property="shippingDestination" destination="gfu-5Z-gny" id="sM8-a5-nj2"/>
                         <outlet property="weight" destination="U26-8w-dND" id="0xi-WO-YsT"/>
                         <outlet property="width" destination="8bJ-ZW-Yw6" id="QsC-zx-Wpv"/>

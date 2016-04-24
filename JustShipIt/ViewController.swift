@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var scrollView: UIScrollView!
     
     @IBOutlet var itemName: UITextField!
@@ -147,12 +147,26 @@ class ViewController: UIViewController {
         self.dateArrayLabel.hidden = true
         self.errorLabel.hidden = true
         self.backButton.hidden = true
+        self.width.delegate = self
+        self.height.delegate = self
+        self.length.delegate = self
+        self.weight.delegate = self
+        self.shippingDestination.delegate = self
+        self.originDestination.delegate = self
+        self.item.delegate = self
+        self.itemName.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+
 
 
 }

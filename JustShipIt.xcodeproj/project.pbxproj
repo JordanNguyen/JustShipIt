@@ -18,6 +18,8 @@
 		8B3014E61CCC3CB8006F15B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3014E51CCC3CB8006F15B3 /* CoreLocation.framework */; };
 		8B3014EB1CCC41A4006F15B3 /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */; };
 		8BDEE19F1CCCB37000E1AAD6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */; };
+		8BDEE1A31CCCC43900E1AAD6 /* SwiftRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDEE1A21CCCC43900E1AAD6 /* SwiftRecognitionViewController.swift */; };
+		8BDEE1AB1CCCD2EC00E1AAD6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BDEE1AA1CCCD2EC00E1AAD6 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,9 @@
 		8B3014E51CCC3CB8006F15B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
 		8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		8BDEE1A21CCCC43900E1AAD6 /* SwiftRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRecognitionViewController.swift; sourceTree = "<group>"; };
+		8BDEE1A91CCCCB4D00E1AAD6 /* JustShipIt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JustShipIt-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BDEE1AA1CCCD2EC00E1AAD6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		D4E62C57943CA137A65E1287 /* Pods-JustShipIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustShipIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustShipIt/Pods-JustShipIt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -44,6 +49,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3014E61CCC3CB8006F15B3 /* CoreLocation.framework in Frameworks */,
+				8BDEE1AB1CCCD2EC00E1AAD6 /* MobileCoreServices.framework in Frameworks */,
 				1C84EBAF471CB5B0C143C575 /* Pods_JustShipIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -54,6 +60,7 @@
 		099380366EBBEEA29B88AED4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8BDEE1AA1CCCD2EC00E1AAD6 /* MobileCoreServices.framework */,
 				3D27C4A49D487D6CA4F35757 /* Pods_JustShipIt.framework */,
 			);
 			name = Frameworks;
@@ -92,11 +99,13 @@
 			children = (
 				8B3014E91CCC3D2F006F15B3 /* Views */,
 				8B3014CF1CCB49FF006F15B3 /* AppDelegate.swift */,
+				8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */,
 				8B3014D31CCB49FF006F15B3 /* Main.storyboard */,
 				8B3014D61CCB49FF006F15B3 /* Assets.xcassets */,
 				8B3014D81CCB49FF006F15B3 /* LaunchScreen.storyboard */,
 				8B3014DB1CCB49FF006F15B3 /* Info.plist */,
 				8B3014E31CCC3AFA006F15B3 /* getLocation.swift */,
+				8BDEE1A91CCCCB4D00E1AAD6 /* JustShipIt-Bridging-Header.h */,
 			);
 			path = JustShipIt;
 			sourceTree = "<group>";
@@ -107,7 +116,7 @@
 				8B3014D11CCB49FF006F15B3 /* ViewController.swift */,
 				154F3F3D1CCC7F4E0069875C /* DataViewController.swift */,
 				8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */,
-				8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */,
+				8BDEE1A21CCCC43900E1AAD6 /* SwiftRecognitionViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -141,13 +150,13 @@
 		8B3014C41CCB49FF006F15B3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Brian Yan";
 				TargetAttributes = {
 					8B3014CB1CCB49FF006F15B3 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = SZVLL8KQSW;
+						DevelopmentTeam = 2B6C4R464U;
 					};
 				};
 			};
@@ -241,6 +250,7 @@
 				8B3014EB1CCC41A4006F15B3 /* GetLocationViewController.swift in Sources */,
 				8B3014D01CCB49FF006F15B3 /* AppDelegate.swift in Sources */,
 				8BDEE19F1CCCB37000E1AAD6 /* CameraViewController.swift in Sources */,
+				8BDEE1A31CCCC43900E1AAD6 /* SwiftRecognitionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,13 +362,16 @@
 			baseConfigurationReference = 62BEF327C96B023EEAFA8DBC /* Pods-JustShipIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustShipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt;
+				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JustShipIt/JustShipIt-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -367,13 +380,15 @@
 			baseConfigurationReference = D4E62C57943CA137A65E1287 /* Pods-JustShipIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustShipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt;
+				PRODUCT_BUNDLE_IDENTIFIER = JustShipIt2.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "JustShipIt/JustShipIt-Bridging-Header.h";
 			};
 			name = Release;
 		};

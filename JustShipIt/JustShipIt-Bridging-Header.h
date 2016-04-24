@@ -8,6 +8,6 @@
 
 #ifndef JustShipIt_Bridging_Header_h
 #define JustShipIt_Bridging_Header_h
-
+#import "ClarifaiClient.h"
 
 #endif /* JustShipIt_Bridging_Header_h */

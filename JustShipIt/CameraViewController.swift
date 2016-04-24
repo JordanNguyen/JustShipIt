@@ -21,6 +21,8 @@ func fileInDocumentsDirectory(filename: String) -> String {
 }
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    private lazy var client : ClarifaiClient = ClarifaiClient(appID: clarifaiClientID, appSecret: clarifaiClientSecret)
+    
     @IBOutlet var textview: UITextField!
 
     @IBOutlet var Camera: UIButton!
@@ -51,26 +53,34 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         //newMedia = false
     }
     
-    func saveImage (image: UIImage, path: String ) -> Bool{
-        let jpgImageData = UIImageJPEGRepresentation(image, 1.0)   // if you want to save as JPEG
-        let result = jpgImageData!.writeToFile(path, atomically: true)
-        return result
-        
-    }
+    
+    
+    
+    
+    
+    
+    
+//    func saveImage (image: UIImage, path: String ) -> Bool{
+//        let jpgImageData = UIImageJPEGRepresentation(image, 1.0)   // if you want to save as JPEG
+//        let result = jpgImageData!.writeToFile(path, atomically: true)
+//        return result
+//        
+//    }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         ImageDisplay.image = info[UIImagePickerControllerOriginalImage] as? UIImage;
         dismissViewControllerAnimated(true, completion: nil)
         UIImageWriteToSavedPhotosAlbum(ImageDisplay.image!, nil, nil, nil);
-        let myImageName = "image.png"
-        let imagePath = fileInDocumentsDirectory(myImageName)
-        
-        if let image = ImageDisplay.image {
-            saveImage(image, path: imagePath)
-        } else { print("some error message") }
-        
-        if let loadedImage = loadImageFromPath(imagePath) {
-            print(" Loaded Image: \(loadedImage)")
-        } else { print("some error message 2") }
+        recognizeImage(ImageDisplay.image)
+//        let myImageName = "image.png"
+//        let imagePath = fileInDocumentsDirectory(myImageName)
+//        
+//        if let image = ImageDisplay.image {
+//            saveImage(image, path: imagePath)
+//        } else { print("some error message") }
+//        
+//        if let loadedImage = loadImageFromPath(imagePath) {
+//            print(" Loaded Image: \(loadedImage)")
+//        } else { print("some error message 2") }
         
 //            
 //            ImageDisplay.image = image
@@ -86,18 +96,18 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 //        
 //        dismissViewControllerAnimated(true, completion: nil)
         }
-    func loadImageFromPath(path: String) -> UIImage? {
-        
-        let image = UIImage(contentsOfFile: path)
-        
-        if image == nil {
-            
-            print("missing image at: \(path)")
-        }
-        print("Loading image from path: \(path)") // this is just for you to see the path in case you want to go to the directory, using Finder.
-        return image
-        
-    }
+//    func loadImageFromPath(path: String) -> UIImage? {
+//        
+//        let image = UIImage(contentsOfFile: path)
+//        
+//        if image == nil {
+//            
+//            print("missing image at: \(path)")
+//        }
+//        print("Loading image from path: \(path)") // this is just for you to see the path in case you want to go to the directory, using Finder.
+//        return image
+//        
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -108,14 +118,32 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let documentsDirectory = paths[0]
         return documentsDirectory
     }
+    
     private func recognizeImage(image: UIImage!) {
         // Scale down the image. This step is optional. However, sending large images over the
         // network is slow and does not significantly improve recognition performance.
+        let size = CGSizeMake(320, 320 * image.size.height / image.size.width)
+        UIGraphicsBeginImageContext(size)
+        image.drawInRect(CGRectMake(0, 0, size.width, size.height))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
         
-
+        // Encode as a JPEG.
+        let jpeg = UIImageJPEGRepresentation(scaledImage, 0.9)!
+        
         // Send the JPEG to Clarifai for standard image tagging.
+        client.recognizeJpegs([jpeg]) {
+            (results: [ClarifaiResult]?, error: NSError?) in
+            if error != nil {
+                print("Error: \(error)\n")
+                self.textview.text = "Sorry, there was an error recognizing your image."
+            } else {
+                self.textview.text = "Tags:\n" + results![0].tags.joinWithSeparator(", ")
+                print(results![0].tags)
+            }
+//            self.button.enabled = true
         }
-    
+    }
 
     /*
     // MARK: - Navigation

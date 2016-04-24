@@ -62,6 +62,10 @@ class GetLocationViewController: UIViewController, MKMapViewDelegate, CLLocation
     {
         print("Errors: " + error.localizedDescription)
     }
+//    func getZipCode()
+//    {
+//        return zipcode;
+//    }
     
     
     

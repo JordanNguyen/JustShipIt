@@ -11,6 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 class ViewController: UIViewController {
+    @IBOutlet var itemName: UITextField!
     
     @IBOutlet var width: UITextField!
 
@@ -35,6 +36,8 @@ class ViewController: UIViewController {
     @IBOutlet var shipItButton: UIButton!
     
     @IBOutlet var errorLabel: UILabel!
+    
+    @IBOutlet var backButton: UIButton!
     
     var serviceLevelArray:[String] = [];
     var priceArray:[String] = [];
@@ -104,6 +107,7 @@ class ViewController: UIViewController {
                     self.priceArrayLabel.hidden = false
                     self.dateArrayLabel.hidden = false
                     self.shipItButton.hidden = true
+                    self.backButton.hidden = false
                     self.serviceLevelArrayLabel.text = self.carrierArray[0] + " " + self.serviceLevelArray[0]
                     self.priceArrayLabel.text = "$" + self.priceArray[0]
                     self.dateArrayLabel.text = "Estimated Arrival: " + self.dateArray[0]
@@ -115,15 +119,21 @@ class ViewController: UIViewController {
     }
 }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-//        if (segue.identifier == "seg") {
-//            var svc = segue!.destinationViewController as! DataViewController;
-//            print("hi");
-//            
-//            svc.serviceArray = self.serviceLevelArray
-//            
-//        }
-//    }
+    @IBAction func backAction(sender: AnyObject) {
+        self.serviceLevelArrayLabel.hidden = true
+        self.priceArrayLabel.hidden = true
+        self.dateArrayLabel.hidden = true
+        self.errorLabel.hidden = true
+        self.width.hidden = false
+        self.length.hidden = false
+        self.height.hidden = false
+        self.weight.hidden = false
+        self.shippingDestination.hidden = false
+        self.item.hidden = false
+        self.originDestination.hidden = false
+        self.shipItButton.hidden = false
+        self.backButton.hidden = true
+    }
 
     
     override func viewDidLoad() {
@@ -132,6 +142,7 @@ class ViewController: UIViewController {
         self.priceArrayLabel.hidden = true
         self.dateArrayLabel.hidden = true
         self.errorLabel.hidden = true
+        self.backButton.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 

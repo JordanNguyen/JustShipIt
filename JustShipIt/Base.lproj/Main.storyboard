@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qHr-Ly-afy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -76,7 +76,9 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="105" id="7s2-wd-6kI"/>
                                 </constraints>
-                                <state key="normal" title="Just Ship It"/>
+                                <state key="normal" title="Just Ship It">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="justShipIt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0r-iO-xfi"/>
                                 </connections>
@@ -159,9 +161,28 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4aW-Fm-OAT">
+                                <rect key="frame" x="262" y="467" width="76" height="30"/>
+                                <color key="backgroundColor" red="0.62449355289999997" green="1" blue="0.81654643540000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="igK-QA-hqV"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0O0-Cj-Ho2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E02-rU-59d">
+                                <rect key="frame" x="207" y="132" width="187" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="E02-rU-59d" firstAttribute="leading" secondItem="gfu-5Z-gny" secondAttribute="leading" id="1M8-du-maa"/>
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ZS-UP-3Dm"/>
                             <constraint firstItem="J6s-xq-rov" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6dj-7f-kcQ"/>
                             <constraint firstItem="U26-8w-dND" firstAttribute="top" secondItem="vAn-QH-9E1" secondAttribute="bottom" constant="8" symbolic="YES" id="7Gx-QM-6OQ"/>
@@ -173,6 +194,7 @@
                             <constraint firstItem="ahC-r9-YOh" firstAttribute="top" secondItem="QYP-1F-Vvm" secondAttribute="bottom" constant="54" id="PyW-Ze-l7C"/>
                             <constraint firstItem="8bJ-ZW-Yw6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ROY-CS-pd0"/>
                             <constraint firstItem="ehR-mF-uTM" firstAttribute="top" secondItem="8bJ-ZW-Yw6" secondAttribute="bottom" constant="32" id="TUk-qK-8H4"/>
+                            <constraint firstItem="4aW-Fm-OAT" firstAttribute="centerX" secondItem="ahC-r9-YOh" secondAttribute="centerX" id="V1F-6O-H6T"/>
                             <constraint firstItem="QYP-1F-Vvm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VkY-N9-N6e"/>
                             <constraint firstItem="U26-8w-dND" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W53-hS-NGM"/>
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="leading" secondItem="U26-8w-dND" secondAttribute="leading" id="YPF-vB-p8x"/>
@@ -187,19 +209,24 @@
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="leading" secondItem="QYP-1F-Vvm" secondAttribute="leading" id="gky-34-ssa"/>
                             <constraint firstItem="ahC-r9-YOh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hHo-kH-aZ9"/>
                             <constraint firstItem="C7T-Ji-tGJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kgc-RJ-arq"/>
+                            <constraint firstItem="E02-rU-59d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lHL-4q-ySA"/>
                             <constraint firstItem="J6s-xq-rov" firstAttribute="top" secondItem="xaF-tr-X72" secondAttribute="bottom" constant="44" id="mGy-NY-Wut"/>
                             <constraint firstItem="xaF-tr-X72" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mrI-Oi-cbL"/>
                             <constraint firstItem="gfu-5Z-gny" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oUz-1t-czl"/>
                             <constraint firstItem="fo6-23-L8a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3v-zD-njo"/>
                             <constraint firstItem="BBI-K9-SG9" firstAttribute="top" secondItem="gfu-5Z-gny" secondAttribute="bottom" constant="8" symbolic="YES" id="r99-c2-Aa9"/>
+                            <constraint firstItem="4aW-Fm-OAT" firstAttribute="top" secondItem="QYP-1F-Vvm" secondAttribute="bottom" constant="36" id="rGc-Yq-u5I"/>
+                            <constraint firstItem="E02-rU-59d" firstAttribute="top" secondItem="J6s-xq-rov" secondAttribute="bottom" constant="8" symbolic="YES" id="tbk-XY-xVc"/>
                             <constraint firstItem="fo6-23-L8a" firstAttribute="top" secondItem="8bJ-ZW-Yw6" secondAttribute="bottom" constant="8" symbolic="YES" id="tvA-0w-9I6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="4aW-Fm-OAT" id="f2m-bi-FEk"/>
                         <outlet property="dateArrayLabel" destination="C7T-Ji-tGJ" id="rC7-VJ-1ab"/>
                         <outlet property="errorLabel" destination="J6s-xq-rov" id="2pr-i3-f6T"/>
                         <outlet property="height" destination="vAn-QH-9E1" id="M1E-ia-CG5"/>
                         <outlet property="item" destination="QYP-1F-Vvm" id="goD-zz-fOB"/>
+                        <outlet property="itemName" destination="E02-rU-59d" id="p8D-EU-6fQ"/>
                         <outlet property="length" destination="fo6-23-L8a" id="2xw-o8-rxB"/>
                         <outlet property="originDestination" destination="BBI-K9-SG9" id="3B3-Zv-02t"/>
                         <outlet property="priceArrayLabel" destination="1up-Jf-MHY" id="tvi-Ma-VQV"/>

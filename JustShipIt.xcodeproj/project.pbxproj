@@ -10,6 +10,13 @@
 		154F3F3E1CCC7F4E0069875C /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154F3F3D1CCC7F4E0069875C /* DataViewController.swift */; };
 		154F3F421CCCD6970069875C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154F3F411CCCD6970069875C /* FirstViewController.swift */; };
 		1C84EBAF471CB5B0C143C575 /* Pods_JustShipIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D27C4A49D487D6CA4F35757 /* Pods_JustShipIt.framework */; };
+		3B613DDD1CCCFA14001E7510 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B613DD91CCCFA14001E7510 /* background.png */; };
+		3B613DDE1CCCFA14001E7510 /* homebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B613DDA1CCCFA14001E7510 /* homebutton.png */; };
+		3B613DDF1CCCFA14001E7510 /* justshipitlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B613DDB1CCCFA14001E7510 /* justshipitlogo.png */; };
+		3B613DE01CCCFA14001E7510 /* manual.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B613DDC1CCCFA14001E7510 /* manual.png */; };
+		3B613DE21CCCFA46001E7510 /* width.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B613DE11CCCFA46001E7510 /* width.png */; };
+		3B613DE41CCCFA4F001E7510 /* height.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B613DE31CCCFA4F001E7510 /* height.png */; };
+		3B613DE61CCCFA61001E7510 /* length.png in Resources */ = {isa = PBXBuildFile; fileRef = 3B613DE51CCCFA61001E7510 /* length.png */; };
 		8B3014D01CCB49FF006F15B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3014CF1CCB49FF006F15B3 /* AppDelegate.swift */; };
 		8B3014D21CCB49FF006F15B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3014D11CCB49FF006F15B3 /* ViewController.swift */; };
 		8B3014D51CCB49FF006F15B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B3014D31CCB49FF006F15B3 /* Main.storyboard */; };
@@ -28,6 +35,13 @@
 /* Begin PBXFileReference section */
 		154F3F3D1CCC7F4E0069875C /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		154F3F411CCCD6970069875C /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		3B613DD91CCCFA14001E7510 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		3B613DDA1CCCFA14001E7510 /* homebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = homebutton.png; sourceTree = "<group>"; };
+		3B613DDB1CCCFA14001E7510 /* justshipitlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justshipitlogo.png; sourceTree = "<group>"; };
+		3B613DDC1CCCFA14001E7510 /* manual.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = manual.png; sourceTree = "<group>"; };
+		3B613DE11CCCFA46001E7510 /* width.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = width.png; sourceTree = "<group>"; };
+		3B613DE31CCCFA4F001E7510 /* height.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = height.png; sourceTree = "<group>"; };
+		3B613DE51CCCFA61001E7510 /* length.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = length.png; sourceTree = "<group>"; };
 		3D27C4A49D487D6CA4F35757 /* Pods_JustShipIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustShipIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		62BEF327C96B023EEAFA8DBC /* Pods-JustShipIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustShipIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustShipIt/Pods-JustShipIt.debug.xcconfig"; sourceTree = "<group>"; };
 		8B3014CC1CCB49FF006F15B3 /* JustShipIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustShipIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +96,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3B613DD81CCCF990001E7510 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3B613DE31CCCFA4F001E7510 /* height.png */,
+				3B613DE51CCCFA61001E7510 /* length.png */,
+				3B613DE11CCCFA46001E7510 /* width.png */,
+				3B613DD91CCCFA14001E7510 /* background.png */,
+				3B613DDA1CCCFA14001E7510 /* homebutton.png */,
+				3B613DDB1CCCFA14001E7510 /* justshipitlogo.png */,
+				3B613DDC1CCCFA14001E7510 /* manual.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		8B3014C31CCB49FF006F15B3 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +132,7 @@
 		8B3014CE1CCB49FF006F15B3 /* JustShipIt */ = {
 			isa = PBXGroup;
 			children = (
+				3B613DD81CCCF990001E7510 /* Images */,
 				8B3014E91CCC3D2F006F15B3 /* Views */,
 				8B3014CF1CCB49FF006F15B3 /* AppDelegate.swift */,
 				8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */,
@@ -195,8 +224,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B3014DA1CCB49FF006F15B3 /* LaunchScreen.storyboard in Resources */,
+				3B613DE61CCCFA61001E7510 /* length.png in Resources */,
+				3B613DDE1CCCFA14001E7510 /* homebutton.png in Resources */,
+				3B613DDD1CCCFA14001E7510 /* background.png in Resources */,
+				3B613DE41CCCFA4F001E7510 /* height.png in Resources */,
+				3B613DDF1CCCFA14001E7510 /* justshipitlogo.png in Resources */,
+				3B613DE21CCCFA46001E7510 /* width.png in Resources */,
 				8B3014D71CCB49FF006F15B3 /* Assets.xcassets in Resources */,
 				8B3014D51CCB49FF006F15B3 /* Main.storyboard in Resources */,
+				3B613DE01CCCFA14001E7510 /* manual.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

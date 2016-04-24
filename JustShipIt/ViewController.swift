@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     
     var serviceLevelArray:[String] = [];
     var priceArray:[String] = [];
+    var carrierArray:[String] = [];
+    var dateArray:[String] = [];
     
     @IBAction func justShipIt(sender: AnyObject) {
         let widthValue = width.text
@@ -69,10 +71,13 @@ class ViewController: UIViewController {
                     for item in json["rates"].arrayValue {
                         self.serviceLevelArray.append(item["service_level"].stringValue);
                         self.priceArray.append(item["price"].stringValue);
-                       
+                        self.carrierArray.append(item["carrier"].stringValue);
+                        self.dateArray.append(item["est_delivery_date"].stringValue);
                     }
                     print(self.serviceLevelArray)
                     print(self.priceArray)
+                    print(self.carrierArray)
+                    print(self.dateArray)
                     
                     self.width.hidden = true
                     self.length.hidden = true

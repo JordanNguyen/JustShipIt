@@ -30,7 +30,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="w0N-Ex-1mL"/>
+                                    <action selector="button1action:" destination="clI-Rz-yL2" eventType="touchUpInside" id="Hlf-jt-Y5I"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zxe-Vm-2iZ">
@@ -42,7 +42,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="z3d-gz-MAm"/>
+                                    <action selector="button5action:" destination="clI-Rz-yL2" eventType="touchUpInside" id="RPl-F0-uuS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pA8-cZ-shv">
@@ -51,7 +51,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="8sV-Cg-Qj8"/>
+                                    <action selector="button2action:" destination="clI-Rz-yL2" eventType="touchUpInside" id="jf4-1a-SDt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0o-hz-kiB">
@@ -60,7 +60,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="9pR-kO-aMX"/>
+                                    <action selector="button3action:" destination="clI-Rz-yL2" eventType="touchUpInside" id="MrD-0D-cTT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwj-Wn-PWu">
@@ -69,7 +69,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="Cm2-XA-lf0"/>
+                                    <action selector="button4action:" destination="clI-Rz-yL2" eventType="touchUpInside" id="shV-pa-1X2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -99,11 +99,12 @@
                         <outlet property="Option3" destination="e0o-hz-kiB" id="NhX-GL-9jp"/>
                         <outlet property="Option4" destination="Wwj-Wn-PWu" id="gcM-uO-Uty"/>
                         <outlet property="Option5" destination="Zxe-Vm-2iZ" id="KeT-EL-zFS"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="buttonSegue" id="8iM-8q-mYs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSi-4z-kad" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-599" y="-690"/>
+            <point key="canvasLocation" x="-686" y="-1128"/>
         </scene>
         <!--Camera-->
         <scene sceneID="wEH-5h-qxt">
@@ -555,7 +556,12 @@
         <image name="width.png" width="817" height="769"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
         <segue reference="W8P-Dk-2ob"/>
         <segue reference="Qrs-2c-Vrj"/>
+=======
+        <segue reference="9dH-oo-XbQ"/>
+        <segue reference="8iM-8q-mYs"/>
+>>>>>>> 71662313f8ea950e07a86e1ffab8c92c3b5437c5
     </inferredMetricsTieBreakers>
 </document>

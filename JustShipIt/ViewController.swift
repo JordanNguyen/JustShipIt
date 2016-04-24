@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var priceArrayLabel: UILabel!
     
+    @IBOutlet var dateArrayLabel: UILabel!
     
     var serviceLevelArray:[String] = [];
     var priceArray:[String] = [];
@@ -88,8 +89,10 @@ class ViewController: UIViewController {
                     self.originDestination.hidden = true
                     self.serviceLevelArrayLabel.hidden = false
                     self.priceArrayLabel.hidden = false
-                    self.serviceLevelArrayLabel.text = self.serviceLevelArray[0]
+                    self.dateArrayLabel.hidden = false
+                    self.serviceLevelArrayLabel.text = self.carrierArray[0] + " " + self.serviceLevelArray[0]
                     self.priceArrayLabel.text = "$" + self.priceArray[0]
+                    self.dateArrayLabel.text = "Estimated Arrival: " + self.dateArray[0]
                 }
             case .Failure(let error):
                 print(error)
@@ -112,6 +115,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.serviceLevelArrayLabel.hidden = true
         self.priceArrayLabel.hidden = true
+        self.dateArrayLabel.hidden = true
         // Do any additional setup after loading the view, typically from a nib.
     }
 

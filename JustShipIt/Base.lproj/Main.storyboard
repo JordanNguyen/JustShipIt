@@ -90,6 +90,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7T-Ji-tGJ">
+                                <rect key="frame" x="279" y="294" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -113,8 +119,10 @@
                             <constraint firstItem="xaF-tr-X72" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ejh-hy-qjB"/>
                             <constraint firstItem="1up-Jf-MHY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fd8-Pp-YFr"/>
                             <constraint firstItem="ehR-mF-uTM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fyf-Gl-pUq"/>
+                            <constraint firstItem="C7T-Ji-tGJ" firstAttribute="bottom" secondItem="U26-8w-dND" secondAttribute="bottom" id="gfM-Ru-naF"/>
                             <constraint firstItem="vAn-QH-9E1" firstAttribute="leading" secondItem="QYP-1F-Vvm" secondAttribute="leading" id="gky-34-ssa"/>
                             <constraint firstItem="ahC-r9-YOh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hHo-kH-aZ9"/>
+                            <constraint firstItem="C7T-Ji-tGJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kgc-RJ-arq"/>
                             <constraint firstItem="xaF-tr-X72" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mrI-Oi-cbL"/>
                             <constraint firstItem="gfu-5Z-gny" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oUz-1t-czl"/>
                             <constraint firstItem="fo6-23-L8a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r3v-zD-njo"/>
@@ -123,6 +131,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateArrayLabel" destination="C7T-Ji-tGJ" id="rC7-VJ-1ab"/>
                         <outlet property="height" destination="vAn-QH-9E1" id="M1E-ia-CG5"/>
                         <outlet property="item" destination="QYP-1F-Vvm" id="goD-zz-fOB"/>
                         <outlet property="length" destination="fo6-23-L8a" id="2xw-o8-rxB"/>

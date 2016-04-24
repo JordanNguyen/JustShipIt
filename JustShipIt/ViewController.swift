@@ -143,7 +143,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.contentSize.height = 3200
+        scrollView.contentSize.height = 600
         self.serviceLevelArrayLabel.hidden = true
         self.priceArrayLabel.hidden = true
         self.dateArrayLabel.hidden = true

@@ -19,6 +19,7 @@
 		8B3014E61CCC3CB8006F15B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3014E51CCC3CB8006F15B3 /* CoreLocation.framework */; };
 		8B3014EB1CCC41A4006F15B3 /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */; };
 		8BB3B5D91CCCEC2500D4AEFD /* ClarifaiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BB3B5D81CCCEC2500D4AEFD /* ClarifaiClient.m */; };
+		8BCEB9BB1CCCF03D00FDF189 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BCEB9BA1CCCF03D00FDF189 /* Credentials.swift */; };
 		8BDEE19F1CCCB37000E1AAD6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */; };
 		8BDEE1A31CCCC43900E1AAD6 /* SwiftRecognitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDEE1A21CCCC43900E1AAD6 /* SwiftRecognitionViewController.swift */; };
 		8BDEE1AB1CCCD2EC00E1AAD6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BDEE1AA1CCCD2EC00E1AAD6 /* MobileCoreServices.framework */; };
@@ -42,6 +43,7 @@
 		8BB3B5D81CCCEC2500D4AEFD /* ClarifaiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClarifaiClient.m; sourceTree = "<group>"; };
 		8BB3B5DA1CCCEC5A00D4AEFD /* JustShipIt-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JustShipIt-Bridging-Header.h"; sourceTree = "<group>"; };
 		8BB3B5DC1CCCED0500D4AEFD /* ClarifaiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ClarifaiClient.h; sourceTree = "<group>"; };
+		8BCEB9BA1CCCF03D00FDF189 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		8BDEE1A21CCCC43900E1AAD6 /* SwiftRecognitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftRecognitionViewController.swift; sourceTree = "<group>"; };
 		8BDEE1AA1CCCD2EC00E1AAD6 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
@@ -113,6 +115,7 @@
 				8BB3B5D81CCCEC2500D4AEFD /* ClarifaiClient.m */,
 				8BB3B5DA1CCCEC5A00D4AEFD /* JustShipIt-Bridging-Header.h */,
 				8BB3B5DC1CCCED0500D4AEFD /* ClarifaiClient.h */,
+				8BCEB9BA1CCCF03D00FDF189 /* Credentials.swift */,
 			);
 			path = JustShipIt;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			files = (
 				8B3014D21CCB49FF006F15B3 /* ViewController.swift in Sources */,
 				8B3014E41CCC3AFA006F15B3 /* getLocation.swift in Sources */,
+				8BCEB9BB1CCCF03D00FDF189 /* Credentials.swift in Sources */,
 				154F3F3E1CCC7F4E0069875C /* DataViewController.swift in Sources */,
 				8B3014EB1CCC41A4006F15B3 /* GetLocationViewController.swift in Sources */,
 				8BB3B5D91CCCEC2500D4AEFD /* ClarifaiClient.m in Sources */,

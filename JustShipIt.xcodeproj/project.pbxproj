@@ -17,6 +17,7 @@
 		8B3014E41CCC3AFA006F15B3 /* getLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3014E31CCC3AFA006F15B3 /* getLocation.swift */; };
 		8B3014E61CCC3CB8006F15B3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3014E51CCC3CB8006F15B3 /* CoreLocation.framework */; };
 		8B3014EB1CCC41A4006F15B3 /* GetLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */; };
+		8BDEE19F1CCCB37000E1AAD6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		8B3014E31CCC3AFA006F15B3 /* getLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getLocation.swift; sourceTree = "<group>"; };
 		8B3014E51CCC3CB8006F15B3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetLocationViewController.swift; sourceTree = "<group>"; };
+		8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		D4E62C57943CA137A65E1287 /* Pods-JustShipIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustShipIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustShipIt/Pods-JustShipIt.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				8B3014D11CCB49FF006F15B3 /* ViewController.swift */,
 				154F3F3D1CCC7F4E0069875C /* DataViewController.swift */,
 				8B3014EA1CCC41A4006F15B3 /* GetLocationViewController.swift */,
+				8BDEE19E1CCCB37000E1AAD6 /* CameraViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				154F3F3E1CCC7F4E0069875C /* DataViewController.swift in Sources */,
 				8B3014EB1CCC41A4006F15B3 /* GetLocationViewController.swift in Sources */,
 				8B3014D01CCB49FF006F15B3 /* AppDelegate.swift in Sources */,
+				8BDEE19F1CCCB37000E1AAD6 /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,10 +352,13 @@
 			baseConfigurationReference = 62BEF327C96B023EEAFA8DBC /* Pods-JustShipIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustShipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Brian.JustShipIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -360,10 +367,13 @@
 			baseConfigurationReference = D4E62C57943CA137A65E1287 /* Pods-JustShipIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustShipIt/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Brian.JustShipIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -9,4 +9,5 @@ use_frameworks!
 target 'JustShipIt' do
     pod 'Alamofire'
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
+    pod 'AFNetworking'
 end

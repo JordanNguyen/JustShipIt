@@ -18,28 +18,26 @@ class ViewController: UIViewController {
     @IBOutlet weak var item: UITextField!
     
     @IBAction func justShipIt(sender: AnyObject) {
-//        let widthValue = width.text
-//        let lengthValue = length.text
-//        let heightValue = height.text
-//        let weightValue = weight.text
-//        let shippingDestinationValue = shippingDestination.text
-//        let itemValue = item.text
-//        let itemDouble = Double(itemValue!)
+        let widthValue = width.text
+        let lengthValue = length.text
+        let heightValue = height.text
+        let weightValue = weight.text
+        let shippingDestinationValue = shippingDestination.text
+        let itemValue = item.text
+        let itemDouble = Double(itemValue!)
         
         let parameters = [
             "items": [
-                "length": "10",
-                "width" : "10",
-                "height": "11",
-                "weight": "10",
-                "value": 300.00
+                [
+                    "length": lengthValue!,
+                    "width": widthValue!,
+                    "height": heightValue!,
+                    "weight": weightValue!,
+                    "value": itemDouble!
+                ]
             ],
-            "origin_address": [
-                "zip": "93101"
-            ],
-            "destination_address": [
-                "zip": "60060"
-            ]
+            "origin_address": ["zip": "93101"],
+            "destination_address": ["zip": shippingDestinationValue!]
         ]
 
 //        let parameters = [
@@ -49,7 +47,7 @@ class ViewController: UIViewController {
 //            ]
 //        ]
 //        
-        Alamofire.request(.POST, "https://sandbox.shiphawk.com/api/v4/rates?api_key=ce664be73291da576420dc85e005ef1d", parameters: parameters, encoding: .JSON).responseJSON
+        Alamofire.request(.POST, "https://sandbox.shiphawk.com/api/v4/rates?api_key=ce664be73291da576420dc85e005ef1d", parameters: parameters, headers: ["Content-Type": "applications/json"], encoding: .JSON).responseJSON
             { response in switch response.result {
             case .Success(let JSON):
                 print("Success with JSON: \(JSON)")

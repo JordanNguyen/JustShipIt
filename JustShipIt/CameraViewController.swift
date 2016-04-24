@@ -22,7 +22,7 @@ func fileInDocumentsDirectory(filename: String) -> String {
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     private lazy var client : ClarifaiClient = ClarifaiClient(appID: clarifaiClientID, appSecret: clarifaiClientSecret)
-    
+    var finalresults :[String] = []
     @IBOutlet var textview: UITextField!
 
     @IBOutlet var Camera: UIButton!
@@ -50,65 +50,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         dismissViewControllerAnimated(true, completion: nil)
-        //newMedia = false
     }
-    
-    
-    
-    
-    
-    
-    
-    
-//    func saveImage (image: UIImage, path: String ) -> Bool{
-//        let jpgImageData = UIImageJPEGRepresentation(image, 1.0)   // if you want to save as JPEG
-//        let result = jpgImageData!.writeToFile(path, atomically: true)
-//        return result
-//        
-//    }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         ImageDisplay.image = info[UIImagePickerControllerOriginalImage] as? UIImage;
         dismissViewControllerAnimated(true, completion: nil)
         UIImageWriteToSavedPhotosAlbum(ImageDisplay.image!, nil, nil, nil);
         recognizeImage(ImageDisplay.image)
-//        let myImageName = "image.png"
-//        let imagePath = fileInDocumentsDirectory(myImageName)
-//        
-//        if let image = ImageDisplay.image {
-//            saveImage(image, path: imagePath)
-//        } else { print("some error message") }
-//        
-//        if let loadedImage = loadImageFromPath(imagePath) {
-//            print(" Loaded Image: \(loadedImage)")
-//        } else { print("some error message 2") }
-        
-//            
-//            ImageDisplay.image = image
-//            textview.text = "Recognizing..."
-//            //button.enabled = false
-//            if let image = UIImage(named: "example.png") {
-//                if let data = UIImageJPEGRepresentation(image, 0.8) {
-//                    let filename = getDocumentsDirectory().stringByAppendingPathComponent("copy.png")
-//                    print(filename)
-//                    data.writeToFile(filename, atomically: true)
-//                }
-//            }
-//        
-//        dismissViewControllerAnimated(true, completion: nil)
-        }
-//    func loadImageFromPath(path: String) -> UIImage? {
-//        
-//        let image = UIImage(contentsOfFile: path)
-//        
-//        if image == nil {
-//            
-//            print("missing image at: \(path)")
-//        }
-//        print("Loading image from path: \(path)") // this is just for you to see the path in case you want to go to the directory, using Finder.
-//        return image
-//        
-//    }
 
+        }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -127,7 +76,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         image.drawInRect(CGRectMake(0, 0, size.width, size.height))
         let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        
         // Encode as a JPEG.
         let jpeg = UIImageJPEGRepresentation(scaledImage, 0.9)!
         
@@ -139,7 +87,13 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
                 self.textview.text = "Sorry, there was an error recognizing your image."
             } else {
                 self.textview.text = "Tags:\n" + results![0].tags.joinWithSeparator(", ")
-                print(results![0].tags)
+                let count = results![0].tags.count
+                if(count < 5){
+                    self.finalresults = Array(results![0].tags.prefix(count))
+                }
+                else {
+                    self.finalresults = Array(results![0].tags.prefix(5))
+                }
             }
 //            self.button.enabled = true
         }

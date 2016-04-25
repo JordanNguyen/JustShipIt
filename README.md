@@ -1,5 +1,7 @@
 ##SB Hacks II 
-![alt tag](http://i.imgur.com/k0qUuJ8.png)
+<p align="center">
+  <img src="http://i.imgur.com/k0qUuJ8.png" width="100" height="100"/>
+</p>
 
 #Inspiration
 After learning about ShipHawk's robust API, we were inspired to make a mobile application that uses this API. Instead of having to use a computer, users can use an easy, convenient mobile app.

@@ -1,6 +1,6 @@
-##SB Hacks II 
-<p align="center">
-  <img src="http://i.imgur.com/k0qUuJ8.png" width="250" height="200" align:"left"/>
+#SB Hacks II 
+<p align="left">
+  <img src="http://i.imgur.com/k0qUuJ8.png" width="250" height="200"/>
 </p>
 
 ###Inspiration
